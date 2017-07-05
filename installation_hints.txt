@@ -53,9 +53,29 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.4.3/bazel_0.4.3-lin
 echo "0cd6592ac2c5548d566fa9f874a386737e76029f5aabe1f04f8320173a05280d bazel_0.4.3-linux-x86_64.deb" > bazel_0.4.3-linux-x86_64.deb.sha256
 sha256sum --check bazel_0.4.3-linux-x86_64.deb.sha256 && sudo dpkg -i bazel_0.4.3-linux-x86_64.deb
 
+Other Prerequisites
+
+Other prerequisites may be installed as follows:
+
+sudo apt-get update
+sudo apt-get install --no-install-recommends \
+  autoconf automake bison doxygen freeglut3-dev git graphviz \
+  libboost-dev libboost-system-dev libgtk2.0-dev libhtml-form-perl \
+  libjpeg-dev libmpfr-dev libpng-dev libterm-readkey-perl libtinyxml-dev \
+  libtool libvtk5-dev libwww-perl make ninja-build \
+  patchutils perl pkg-config \
+  python-bs4 python-dev python-gtk2 python-html5lib python-numpy \
+  python-pip python-sphinx python-yaml unzip valgrind
+
+
+
+sudo apt-get update
+sudo apt-get install --no-install-recommends \
+  libqt4-dev libqt4-opengl-dev libqwt-dev \
+  libvtk-java libvtk5-qt4-dev python-lxml python-scipy python-vtk
+
 
 Add to ~/.bashrc:
-
 export CC=clang-3.9 CXX=clang++-3.9 FC=gfortran-4.9
 
 
